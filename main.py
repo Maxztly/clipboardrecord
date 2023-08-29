@@ -11,7 +11,7 @@ def get_clipboard_text():
 
 
 def main():
-    clipboard_history = []  # Liste zur Speicherung des Clipboard-Verlaufs
+    clipboard_history = []
 
     while True:
         clipboard_data = get_clipboard_text()
@@ -19,9 +19,9 @@ def main():
         if clipboard_data:
             clipboard_history.append(clipboard_data)
             df = pd.DataFrame({"Clipboard Content": clipboard_history})
-            df.to_csv("clipboard_history.csv", index=False)  # Speichern in CSV-Datei
+            df.to_csv("clipboard_history.csv", index=False)  
 
-        time.sleep(1)  # Warte 1 Sekunde vor der nächsten Überprüfung
+        time.sleep(1) 
 
 
 if __name__ == "__main__":
